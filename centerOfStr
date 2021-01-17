@@ -1,0 +1,12 @@
+# 문자열 가운데 문자 반환 함수
+
+def solution(s):
+    answer = ''
+    l = len(s)
+    if l % 2 != 0:
+        idx = l//2 + 1
+        answer = s[idx-1]
+    else:
+        idx = l//2
+        answer = s[idx-1:idx+1]
+    return answer
