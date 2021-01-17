@@ -1,0 +1,21 @@
+def num(i):
+    try:
+        return int(i)
+    except (ValueError,TypeError,SyntaxError):
+        return 'a'
+
+
+
+def solution(s):
+    l = len(s)
+
+    for i in range(l):
+        k = num(s[i])
+        # print(type(k))
+        if type(k) != int:
+                answer = False
+                break
+        else:
+            answer = True
+
+    return answer
