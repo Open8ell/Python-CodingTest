@@ -3,7 +3,7 @@
 import sys
 from collections import deque
 
-def dfs(arr, x, y, s):
+def bfs(arr, x, y, s):
 
   visited[x][y] = True 
 
@@ -43,9 +43,8 @@ if __name__ == "__main__":
     for j in range(N):
       if visited[i][j] == False:
         if arr[i][j] == 'W':
-          w_score += dfs(arr,i,j,'W')
+          w_score += bfs(arr,i,j,'W')
         elif arr[i][j] == 'B':
-          b_score += dfs(arr,i,j,'B')
+          b_score += bfs(arr,i,j,'B')
 
-  # print([[False]*3 for _ in range(2)])
   print(w_score, b_score)
